@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { opacity: 0; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes spinAnim { to { transform: rotate(360deg); } }
+
+.animate-slide-down  { animation: slideDown 0.3s ease forwards; }
+.animate-bounce-slow { animation: bounceSlow 1.2s ease-in-out infinite; }
+.animate-spin-slow   { animation: spinAnim 0.9s linear infinite; }
